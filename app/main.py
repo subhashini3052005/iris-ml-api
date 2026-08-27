@@ -1,6 +1,7 @@
-from app.models.schemas import PredictionInput
+from app.models.schemas import PredictionInput,PredictionOutput
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI,HTTPException, Request
+from fastapi.responses import JSONResponse
 import joblib
 import uuid
 
@@ -11,7 +12,17 @@ async def lifespan(app: FastAPI):
     print("Model loaded successfully!")
     yield
 
+class InvalidInputShape(Exception):
+    pass
+
 app = FastAPI(lifespan=lifespan)
+
+@app.exception_handler(InvalidInputShape)
+async def invalid_input_shape_handler(request: Request, exc: InvalidInputShape):
+    return JSONResponse(
+        status_code=400,
+        content={"detail": "Invalid input shape"}
+    )
 
 
 @app.get("/")
@@ -26,7 +37,7 @@ def health():
     }
 
 
-@app.post("/predict")
+@app.post("/predict",response_model=PredictionOutput)
 def predict(data: PredictionInput):
     features = [[
         data.sepal_length,
@@ -35,10 +46,19 @@ def predict(data: PredictionInput):
         data.petal_width
     ]]
 
-    prediction = app.state.model.predict(features)
+    if len(features) !=1 or len(features[0]) !=4:
+        raise InvalidInputShape()
+    try:
+         prediction = app.state.model.predict(features)
+         probabilities = app.state.model.predict_proba(features)
+         confidence = float(max(probabilities[0]))
 
-    probabilities = app.state.model.predict_proba(features)
-    confidence = float(max(probabilities[0]))
+    except Exception as e :
+        print("Prediction error:",e)
+        raise HTTPException(
+            status_code=500,
+            detail="Prediction failed"
+        )
 
     request_id = str(uuid.uuid4())
 
