@@ -1,0 +1,11 @@
+2026-08-28 10:46:07,740 | INFO | Model loaded successfully!
+2026-08-28 10:46:25,052 | INFO | Model loaded successfully!
+2026-08-28 10:47:10,478 | INFO | Model loaded successfully!
+2026-08-28 10:47:16,490 | INFO | Model loaded successfully!
+2026-08-28 10:47:20,966 | INFO | Model loaded successfully!
+2026-08-28 10:47:24,802 | INFO | Model loaded successfully!
+2026-08-28 10:47:42,376 | INFO | Model loaded successfully!
+2026-08-28 10:48:01,957 | INFO | Model loaded successfully!
+2026-08-28 14:49:47,664 | INFO | Model loaded successfully!
+2026-08-28 14:51:35,914 | INFO | Prediction successful: prediction=0 | request_id=527311a4-1325-4a2e-be06-34385acac7a2
+2026-08-28 14:51:35,919 | INFO | Request: POST /predict | request_id=527311a4-1325-4a2e-be06-34385acac7a2 | duration=0.0261s | status=200
