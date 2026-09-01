@@ -9,3 +9,31 @@
 2026-08-28 14:49:47,664 | INFO | Model loaded successfully!
 2026-08-28 14:51:35,914 | INFO | Prediction successful: prediction=0 | request_id=527311a4-1325-4a2e-be06-34385acac7a2
 2026-08-28 14:51:35,919 | INFO | Request: POST /predict | request_id=527311a4-1325-4a2e-be06-34385acac7a2 | duration=0.0261s | status=200
+2026-09-01 09:30:35,540 | INFO | Model loaded successfully!
+2026-09-01 09:30:43,988 | INFO | Request: GET / | request_id=6dfab723-4140-4505-a717-3acc7a6e1610 | duration=0.0087s | status=200
+2026-09-01 09:31:08,508 | INFO | Request: GET /docs | request_id=33de158f-2566-4e25-a458-d5fcac885b00 | duration=0.0005s | status=200
+2026-09-01 09:31:08,714 | INFO | Request: GET /openapi.json | request_id=98dfbcc5-7288-4de7-9ddc-79a53be80fe0 | duration=0.0065s | status=200
+2026-09-01 09:34:32,854 | INFO | Model loaded successfully!
+2026-09-01 09:34:36,223 | INFO | Model loaded successfully!
+2026-09-01 09:34:40,145 | INFO | Model loaded successfully!
+2026-09-01 09:34:47,081 | INFO | Model loaded successfully!
+2026-09-01 09:34:50,014 | INFO | Model loaded successfully!
+2026-09-01 09:34:54,287 | INFO | Model loaded successfully!
+2026-09-01 09:34:57,431 | INFO | Model loaded successfully!
+2026-09-01 09:35:00,768 | INFO | Model loaded successfully!
+2026-09-01 09:35:03,763 | INFO | Model loaded successfully!
+2026-09-01 09:35:06,667 | INFO | Model loaded successfully!
+2026-09-01 09:35:17,283 | INFO | Model loaded successfully!
+2026-09-01 09:35:22,098 | INFO | Model loaded successfully!
+2026-09-01 09:35:25,408 | INFO | Model loaded successfully!
+2026-09-01 09:35:33,653 | INFO | Model loaded successfully!
+2026-09-01 09:35:36,406 | INFO | Model loaded successfully!
+2026-09-01 09:35:42,424 | INFO | Model loaded successfully!
+2026-09-01 09:35:45,490 | INFO | Model loaded successfully!
+2026-09-01 09:35:57,645 | INFO | Model loaded successfully!
+2026-09-01 09:36:00,284 | INFO | Model loaded successfully!
+2026-09-01 09:36:07,451 | INFO | Model loaded successfully!
+2026-09-01 09:36:10,047 | INFO | Model loaded successfully!
+2026-09-01 09:36:12,874 | INFO | Model loaded successfully!
+2026-09-01 09:36:15,942 | INFO | Model loaded successfully!
+2026-09-01 09:36:36,308 | INFO | Model loaded successfully!

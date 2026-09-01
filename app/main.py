@@ -1,8 +1,9 @@
-from app.models.schemas import PredictionInput,PredictionOutput
 from contextlib import asynccontextmanager
-from fastapi import FastAPI,HTTPException, Request
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from app.logging_config import setup_logger
+from app.routers.v1 import router as v1_router
+from app.exceptions import InvalidInputShape
 import joblib
 import uuid
 import time
@@ -16,10 +17,9 @@ async def lifespan(app: FastAPI):
     logger.info("Model loaded successfully!")
     yield
 
-class InvalidInputShape(Exception):
-    pass
-
 app = FastAPI(lifespan=lifespan)
+
+app.include_router(v1_router)
 
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
@@ -55,47 +55,3 @@ async def invalid_input_shape_handler(request: Request, exc: InvalidInputShape):
 def root():
     return {"message": "ML API is alive"}
 
-@app.get("/health")
-def health():
-    return {
-        "status": "ok",
-        "model_loaded": hasattr(app.state, "model")
-    }
-
-
-@app.post("/predict",response_model=PredictionOutput)
-def predict(request: Request, data: PredictionInput):
-    features = [[
-        data.sepal_length,
-        data.sepal_width,
-        data.petal_length,
-        data.petal_width
-    ]]
-
-    if len(features) !=1 or len(features[0]) !=4:
-        raise InvalidInputShape()
-    try:
-         prediction = app.state.model.predict(features)
-         probabilities = app.state.model.predict_proba(features)
-         confidence = float(max(probabilities[0]))
-
-    except Exception as e :
-        logger.error("Prediction error:%s",e)
-        raise HTTPException(
-            status_code=500,
-            detail="Prediction failed"
-        )
-
-    request_id = request.state.request_id
-
-    logger.info(
-        "Prediction successful: prediction=%s | request_id=%s",
-        int(prediction[0]),
-        request_id
-    )
-
-    return {
-        "prediction": int(prediction[0]),
-        "confidence": confidence,
-        "request_id": request_id
-    }
