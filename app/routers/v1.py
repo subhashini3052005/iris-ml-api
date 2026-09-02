@@ -1,9 +1,16 @@
 from fastapi import HTTPException, Request, APIRouter
-from app.models.schemas import PredictionInput,PredictionOutput
+from app.models.schemas import (
+    PredictionInput,
+    PredictionOutput,
+    PredictionBatchInput,
+    PredictionBatchOutput
+    )
 from app.exceptions import InvalidInputShape
 import logging
+import time
+import json
 
-logger = logging.getLogger("ml.api")
+logger = logging.getLogger("ml_api")
 
 router = APIRouter(prefix="/api/v1")
 
@@ -19,21 +26,33 @@ def health(request: Request):
         "model_loaded": hasattr(request.app.state, "model")
     }
 
-@router.post("/predict",response_model=PredictionOutput)
-def predict(request: Request, data: PredictionInput):
-    features = [[
-        data.sepal_length,
-        data.sepal_width,
-        data.petal_length,
-        data.petal_width
-    ]]
+@router.get("/model-info")
+def model_info():
+    with open("ml/saved_model/model_info.json", "r") as f:
+        metadata = json.load(f)
+    return metadata
 
-    if len(features) !=1 or len(features[0]) !=4:
+@router.post("/predict-batch",response_model=PredictionBatchOutput)
+def predict_batch(request: Request, data: PredictionBatchInput):
+    features = [
+        [
+        item.sepal_length,
+        item.sepal_width,
+        item.petal_length,
+        item.petal_width
+        ]
+        for item in data.inputs
+    ]
+
+    if len(data.inputs)<1 or len(data.inputs)>100:
         raise InvalidInputShape()
+
+    start_time = time.time()
+
     try:
          prediction = request.app.state.model.predict(features)
          probabilities = request.app.state.model.predict_proba(features)
-         confidence = float(max(probabilities[0]))
+         confidences = [max(probability) for probability in probabilities]
 
     except Exception as e :
         logger.error("Prediction error:%s",e)
@@ -43,15 +62,26 @@ def predict(request: Request, data: PredictionInput):
         )
 
     request_id = request.state.request_id
+    duration = time.time() - start_time
 
     logger.info(
-        "Prediction successful: prediction=%s | request_id=%s",
-        int(prediction[0]),
+        "Batch prediction successful | batch_size=%s | duration=%.4fs | request_id=%s",
+        len(data.inputs),
+        duration,
         request_id
     )
 
-    return {
-        "prediction": int(prediction[0]),
-        "confidence": confidence,
-        "request_id": request_id
+    predictions = []
+
+    for pred,conf in zip(prediction,confidences):
+        predictions.append({
+            "prediction": int(pred),
+            "confidence": float(conf),
+            "request_id": request_id
+        })
+
+    return{
+        "predictions": predictions
     }
+       
+    

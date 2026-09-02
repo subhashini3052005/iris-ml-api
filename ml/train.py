@@ -2,8 +2,10 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+from datetime import datetime
 import joblib
 import os
+import json
 
 
 iris = load_iris()
@@ -36,6 +38,20 @@ print("Model Accuracy:", accuracy)
 
 os.makedirs("ml/saved_model", exist_ok=True)
 
+metadata = {
+    "model_type":type(model).__name__,
+    "version": "1.0.0",
+    "training_date": datetime.now().strftime("%Y-%m-%d"),
+    "features": [
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width"
+    ]
+}
+
+with open("ml/saved_model/model_info.json","w")as f:
+    json.dump(metadata, f, indent=4)
 
 joblib.dump(model, "ml/saved_model/model.joblib")
 

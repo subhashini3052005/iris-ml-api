@@ -1,0 +1,11 @@
+{
+    "model_type": "LogisticRegression",
+    "version": "1.0.0",
+    "training_date": "2026-09-02",
+    "features": [
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width"
+    ]
+}

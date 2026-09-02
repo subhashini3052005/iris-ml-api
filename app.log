@@ -37,3 +37,126 @@
 2026-09-01 09:36:12,874 | INFO | Model loaded successfully!
 2026-09-01 09:36:15,942 | INFO | Model loaded successfully!
 2026-09-01 09:36:36,308 | INFO | Model loaded successfully!
+2026-09-02 20:55:32,946 | INFO | Model loaded successfully!
+2026-09-02 20:55:44,297 | INFO | Request: GET / | request_id=212e2687-d61a-4d2b-afda-126c4980bf32 | duration=0.0711s | status=200
+2026-09-02 20:55:50,773 | INFO | Request: GET /docs | request_id=28bafec2-8bfb-4ed5-96c8-44e3eeb565c6 | duration=0.0044s | status=200
+2026-09-02 20:55:51,174 | INFO | Request: GET /openapi.json | request_id=9c258460-099b-484a-9621-51b9e2770076 | duration=0.0488s | status=200
+2026-09-02 20:58:04,823 | INFO | Request: POST /api/v1/predict-batch | request_id=3315da0c-ed5f-4d4c-88e9-040bf62de69a | duration=0.0060s | status=422
+2026-09-02 20:59:33,500 | INFO | Request: POST /api/v1/predict-batch | request_id=ec881300-35c3-4750-8b19-a1b72cbbb395 | duration=0.0360s | status=200
+2026-09-02 21:03:26,533 | INFO | Request: POST /api/v1/predict-batch | request_id=c1e29c6a-34b9-4f5c-8e13-9e07560801a8 | duration=0.0144s | status=200
+2026-09-02 21:07:34,577 | INFO | Model loaded successfully!
+2026-09-02 21:07:38,243 | INFO | Model loaded successfully!
+2026-09-02 21:07:41,278 | INFO | Model loaded successfully!
+2026-09-02 21:07:48,206 | INFO | Model loaded successfully!
+2026-09-02 21:07:59,693 | INFO | Model loaded successfully!
+2026-09-02 21:08:03,167 | INFO | Model loaded successfully!
+2026-09-02 21:08:09,006 | INFO | Model loaded successfully!
+2026-09-02 21:09:09,030 | INFO | Model loaded successfully!
+2026-09-02 21:09:12,723 | INFO | Model loaded successfully!
+2026-09-02 21:09:15,798 | INFO | Model loaded successfully!
+2026-09-02 21:09:19,007 | INFO | Model loaded successfully!
+2026-09-02 21:09:22,371 | INFO | Model loaded successfully!
+2026-09-02 21:09:45,153 | INFO | Model loaded successfully!
+2026-09-02 21:09:52,450 | INFO | Model loaded successfully!
+2026-09-02 21:09:56,408 | INFO | Model loaded successfully!
+2026-09-02 21:09:59,435 | INFO | Model loaded successfully!
+2026-09-02 21:10:04,057 | INFO | Model loaded successfully!
+2026-09-02 21:11:28,789 | INFO | Model loaded successfully!
+2026-09-02 21:12:29,271 | INFO | Model loaded successfully!
+2026-09-02 21:12:34,216 | INFO | Model loaded successfully!
+2026-09-02 21:12:46,979 | INFO | Model loaded successfully!
+2026-09-02 21:12:51,049 | INFO | Model loaded successfully!
+2026-09-02 21:12:54,537 | INFO | Model loaded successfully!
+2026-09-02 21:14:18,895 | INFO | Request: POST /api/v1/predict-batch | request_id=9eda5b4e-c38d-4aea-96c8-1a59974c1726 | duration=0.0212s | status=200
+2026-09-02 21:18:15,530 | INFO | Model loaded successfully!
+2026-09-02 21:18:41,796 | INFO | Batch prediction successful | batch_size=2 | duration=0.0049s | request_id=3ed1ab86-d1c7-446c-9182-6bb260e8a7b8
+2026-09-02 21:18:41,797 | INFO | Request: POST /api/v1/predict-batch | request_id=3ed1ab86-d1c7-446c-9182-6bb260e8a7b8 | duration=0.0108s | status=200
+2026-09-02 22:04:18,138 | INFO | Model loaded successfully!
+2026-09-02 22:04:21,731 | INFO | Model loaded successfully!
+2026-09-02 22:04:25,922 | INFO | Model loaded successfully!
+2026-09-02 22:04:28,772 | INFO | Model loaded successfully!
+2026-09-02 22:05:21,238 | INFO | Model loaded successfully!
+2026-09-02 22:05:24,236 | INFO | Model loaded successfully!
+2026-09-02 22:05:27,112 | INFO | Model loaded successfully!
+2026-09-02 22:05:30,378 | INFO | Model loaded successfully!
+2026-09-02 22:05:33,196 | INFO | Model loaded successfully!
+2026-09-02 22:05:36,511 | INFO | Model loaded successfully!
+2026-09-02 22:05:39,622 | INFO | Model loaded successfully!
+2026-09-02 22:05:42,421 | INFO | Model loaded successfully!
+2026-09-02 22:05:46,403 | INFO | Model loaded successfully!
+2026-09-02 22:05:49,114 | INFO | Model loaded successfully!
+2026-09-02 22:05:51,895 | INFO | Model loaded successfully!
+2026-09-02 22:05:54,752 | INFO | Model loaded successfully!
+2026-09-02 22:05:57,780 | INFO | Model loaded successfully!
+2026-09-02 22:06:00,451 | INFO | Model loaded successfully!
+2026-09-02 22:06:03,495 | INFO | Model loaded successfully!
+2026-09-02 22:06:06,311 | INFO | Model loaded successfully!
+2026-09-02 22:06:09,151 | INFO | Model loaded successfully!
+2026-09-02 22:06:12,430 | INFO | Model loaded successfully!
+2026-09-02 22:06:15,592 | INFO | Model loaded successfully!
+2026-09-02 22:06:19,488 | INFO | Model loaded successfully!
+2026-09-02 22:06:22,441 | INFO | Model loaded successfully!
+2026-09-02 22:06:25,519 | INFO | Model loaded successfully!
+2026-09-02 22:06:28,948 | INFO | Model loaded successfully!
+2026-09-02 22:06:32,243 | INFO | Model loaded successfully!
+2026-09-02 22:06:35,300 | INFO | Model loaded successfully!
+2026-09-02 22:06:38,536 | INFO | Model loaded successfully!
+2026-09-02 22:06:41,174 | INFO | Model loaded successfully!
+2026-09-02 22:06:44,525 | INFO | Model loaded successfully!
+2026-09-02 22:06:47,520 | INFO | Model loaded successfully!
+2026-09-02 22:06:50,812 | INFO | Model loaded successfully!
+2026-09-02 22:06:53,503 | INFO | Model loaded successfully!
+2026-09-02 22:06:57,121 | INFO | Model loaded successfully!
+2026-09-02 22:07:00,002 | INFO | Model loaded successfully!
+2026-09-02 22:07:02,698 | INFO | Model loaded successfully!
+2026-09-02 22:07:05,666 | INFO | Model loaded successfully!
+2026-09-02 22:07:08,542 | INFO | Model loaded successfully!
+2026-09-02 22:07:11,301 | INFO | Model loaded successfully!
+2026-09-02 22:07:19,902 | INFO | Model loaded successfully!
+2026-09-02 22:07:24,886 | INFO | Model loaded successfully!
+2026-09-02 22:07:29,825 | INFO | Model loaded successfully!
+2026-09-02 22:07:33,733 | INFO | Model loaded successfully!
+2026-09-02 22:07:37,069 | INFO | Model loaded successfully!
+2026-09-02 22:07:39,871 | INFO | Model loaded successfully!
+2026-09-02 22:07:42,923 | INFO | Model loaded successfully!
+2026-09-02 22:07:45,898 | INFO | Model loaded successfully!
+2026-09-02 22:07:48,943 | INFO | Model loaded successfully!
+2026-09-02 22:07:52,141 | INFO | Model loaded successfully!
+2026-09-02 22:07:55,328 | INFO | Model loaded successfully!
+2026-09-02 22:07:57,997 | INFO | Model loaded successfully!
+2026-09-02 22:08:00,839 | INFO | Model loaded successfully!
+2026-09-02 22:08:08,871 | INFO | Model loaded successfully!
+2026-09-02 22:12:37,152 | INFO | Model loaded successfully!
+2026-09-02 22:12:43,230 | INFO | Model loaded successfully!
+2026-09-02 22:12:47,771 | INFO | Model loaded successfully!
+2026-09-02 22:12:50,669 | INFO | Model loaded successfully!
+2026-09-02 22:12:54,067 | INFO | Model loaded successfully!
+2026-09-02 22:12:56,940 | INFO | Model loaded successfully!
+2026-09-02 22:12:59,998 | INFO | Model loaded successfully!
+2026-09-02 22:13:03,314 | INFO | Model loaded successfully!
+2026-09-02 22:13:06,410 | INFO | Model loaded successfully!
+2026-09-02 22:13:09,989 | INFO | Model loaded successfully!
+2026-09-02 22:13:13,340 | INFO | Model loaded successfully!
+2026-09-02 22:13:16,047 | INFO | Model loaded successfully!
+2026-09-02 22:13:19,603 | INFO | Model loaded successfully!
+2026-09-02 22:13:22,438 | INFO | Model loaded successfully!
+2026-09-02 22:13:25,569 | INFO | Model loaded successfully!
+2026-09-02 22:13:28,208 | INFO | Model loaded successfully!
+2026-09-02 22:13:31,424 | INFO | Model loaded successfully!
+2026-09-02 22:13:35,053 | INFO | Model loaded successfully!
+2026-09-02 22:13:38,066 | INFO | Model loaded successfully!
+2026-09-02 22:13:41,949 | INFO | Model loaded successfully!
+2026-09-02 22:13:44,883 | INFO | Model loaded successfully!
+2026-09-02 22:13:47,636 | INFO | Model loaded successfully!
+2026-09-02 22:13:51,094 | INFO | Model loaded successfully!
+2026-09-02 22:13:54,037 | INFO | Model loaded successfully!
+2026-09-02 22:15:06,457 | INFO | Model loaded successfully!
+2026-09-02 22:15:19,573 | INFO | Model loaded successfully!
+2026-09-02 22:15:45,473 | INFO | Model loaded successfully!
+2026-09-02 22:15:54,498 | INFO | Model loaded successfully!
+2026-09-02 22:16:29,188 | INFO | Model loaded successfully!
+2026-09-02 22:35:07,277 | INFO | Model loaded successfully!
+2026-09-02 22:36:01,852 | INFO | Request: GET / | request_id=b372c006-b2bc-4a54-b6e8-4ebba43dc782 | duration=0.0064s | status=200
+2026-09-02 22:36:08,751 | INFO | Request: GET /docs | request_id=090a482c-ea9c-4e7f-b1b2-d74b0ca97484 | duration=0.0168s | status=200
+2026-09-02 22:36:08,883 | INFO | Request: GET /openapi.json | request_id=aa242a39-1335-4c17-86c1-23f87fe8b7da | duration=0.0120s | status=200
+2026-09-02 22:37:03,235 | INFO | Request: GET /api/v1/model-info | request_id=e0fdd0c0-5f2a-4dc2-bfb0-056f87ebbb1a | duration=0.0027s | status=200
