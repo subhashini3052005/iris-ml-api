@@ -6,6 +6,7 @@ from app.models.schemas import (
     PredictionBatchOutput
     )
 from app.exceptions import InvalidInputShape
+from app.config import settings
 import logging
 import time
 import json
@@ -44,8 +45,10 @@ def predict_batch(request: Request, data: PredictionBatchInput):
         for item in data.inputs
     ]
 
-    if len(data.inputs)<1 or len(data.inputs)>100:
-        raise InvalidInputShape()
+    if len(data.inputs)<1 or len(data.inputs)>settings.MAX_BATCH_SIZE:
+        raise InvalidInputShape(
+            f"Batch size must be between 1 and {settings.MAX_BATCH_SIZE}"
+        )
 
     start_time = time.time()
 

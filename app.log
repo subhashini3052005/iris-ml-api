@@ -160,3 +160,24 @@
 2026-09-02 22:36:08,751 | INFO | Request: GET /docs | request_id=090a482c-ea9c-4e7f-b1b2-d74b0ca97484 | duration=0.0168s | status=200
 2026-09-02 22:36:08,883 | INFO | Request: GET /openapi.json | request_id=aa242a39-1335-4c17-86c1-23f87fe8b7da | duration=0.0120s | status=200
 2026-09-02 22:37:03,235 | INFO | Request: GET /api/v1/model-info | request_id=e0fdd0c0-5f2a-4dc2-bfb0-056f87ebbb1a | duration=0.0027s | status=200
+2026-09-03 19:36:30,844 | INFO | Model loaded successfully!
+2026-09-03 19:36:53,365 | INFO | Request: GET / | request_id=be72c1cc-e10a-46b5-b5d2-cdad875fc6d3 | duration=0.0034s | status=200
+2026-09-03 19:36:58,825 | INFO | Request: GET /docs | request_id=bd0b155f-cf71-45d1-b928-1284663be260 | duration=0.0030s | status=200
+2026-09-03 19:36:59,088 | INFO | Request: GET /openapi.json | request_id=77084491-eb52-438f-8541-c75bcfeb632d | duration=0.0103s | status=200
+2026-09-03 19:38:17,956 | INFO | Batch prediction successful | batch_size=1 | duration=0.0085s | request_id=4b38bac7-e1e6-4847-bd4b-0764a7d7ce15
+2026-09-03 19:38:17,959 | INFO | Request: POST /api/v1/predict-batch | request_id=4b38bac7-e1e6-4847-bd4b-0764a7d7ce15 | duration=0.0137s | status=200
+2026-09-03 19:39:40,657 | INFO | Request: POST /api/v1/predict-batch | request_id=27251678-47e8-44c9-afeb-b725a8249c82 | duration=0.0060s | status=400
+2026-09-03 19:39:45,518 | INFO | Request: POST /api/v1/predict-batch | request_id=a26196d9-bcf8-436e-ad3a-ff8a433f8d14 | duration=0.0010s | status=400
+2026-09-03 19:41:15,526 | INFO | Model loaded successfully!
+2026-09-03 19:41:18,326 | INFO | Model loaded successfully!
+2026-09-03 19:41:22,497 | INFO | Model loaded successfully!
+2026-09-03 19:41:35,479 | INFO | Request: POST /api/v1/predict-batch | request_id=d2b72671-d193-4d2e-96b8-597d6f748e03 | duration=0.0038s | status=400
+2026-09-03 19:41:52,266 | INFO | Request: POST /api/v1/predict-batch | request_id=02c69dd6-eb99-42b2-83c0-bbaa3d28bbc5 | duration=0.0011s | status=400
+2026-09-03 19:42:02,256 | INFO | Request: POST /api/v1/predict-batch | request_id=aaabee14-e7fd-414f-bbe4-1d5a9f4f05c2 | duration=0.0011s | status=400
+2026-09-03 19:43:03,446 | INFO | Request: POST /api/v1/predict-batch | request_id=8da2b679-485a-4d8f-b238-a6e2438f3b9a | duration=0.0022s | status=400
+2026-09-03 19:44:23,034 | INFO | Model loaded successfully!
+2026-09-03 19:44:27,457 | INFO | Request: GET / | request_id=52fce2e6-2e66-4798-884c-60a5123e9e22 | duration=0.0029s | status=200
+2026-09-03 19:44:33,404 | INFO | Request: GET /docs | request_id=17d2cf6e-f755-4ebb-85fe-2d4c5474836c | duration=0.0006s | status=200
+2026-09-03 19:44:33,684 | INFO | Request: GET /openapi.json | request_id=e7714637-d99e-499d-ba39-44f905b4324e | duration=0.0055s | status=200
+2026-09-03 19:45:01,821 | INFO | Batch prediction successful | batch_size=3 | duration=0.0091s | request_id=50d5fddc-da24-41f6-8220-999d9d31cdbd
+2026-09-03 19:45:01,822 | INFO | Request: POST /api/v1/predict-batch | request_id=50d5fddc-da24-41f6-8220-999d9d31cdbd | duration=0.0130s | status=200

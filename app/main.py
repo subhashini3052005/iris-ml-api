@@ -4,6 +4,7 @@ from fastapi.responses import JSONResponse
 from app.logging_config import setup_logger
 from app.routers.v1 import router as v1_router
 from app.exceptions import InvalidInputShape
+from app.config import settings
 import joblib
 import uuid
 import time
@@ -12,12 +13,15 @@ logger = setup_logger()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    model = joblib.load("ml/saved_model/model.joblib")
+    model = joblib.load(settings.MODEL_PATH)
     app.state.model = model
     logger.info("Model loaded successfully!")
     yield
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(
+    title = settings.API_TITLE,
+    lifespan = lifespan
+)
 
 app.include_router(v1_router)
 
@@ -47,7 +51,7 @@ async def log_requests(request: Request, call_next):
 async def invalid_input_shape_handler(request: Request, exc: InvalidInputShape):
     return JSONResponse(
         status_code=400,
-        content={"detail": "Invalid input shape"}
+        content={"detail": str(exc)}
     )
 
 
