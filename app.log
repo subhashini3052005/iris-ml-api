@@ -181,3 +181,24 @@
 2026-09-03 19:44:33,684 | INFO | Request: GET /openapi.json | request_id=e7714637-d99e-499d-ba39-44f905b4324e | duration=0.0055s | status=200
 2026-09-03 19:45:01,821 | INFO | Batch prediction successful | batch_size=3 | duration=0.0091s | request_id=50d5fddc-da24-41f6-8220-999d9d31cdbd
 2026-09-03 19:45:01,822 | INFO | Request: POST /api/v1/predict-batch | request_id=50d5fddc-da24-41f6-8220-999d9d31cdbd | duration=0.0130s | status=200
+2026-09-05 20:00:01,084 | INFO | Model loaded successfully!
+2026-09-05 20:00:01,104 | INFO | Request: GET /api/v1/health | request_id=b38d82a0-373a-4442-811b-eace93342fa0 | duration=0.0168s | status=200
+2026-09-05 20:03:47,366 | INFO | Model loaded successfully!
+2026-09-05 20:03:47,387 | INFO | Request: GET /api/v1/health | request_id=de09efe1-dc7d-4a7c-8cb0-9d9072507a90 | duration=0.0115s | status=200
+2026-09-05 20:36:51,215 | INFO | Model loaded successfully!
+2026-09-05 20:37:00,679 | INFO | Request: GET / | request_id=b7852cab-2c9b-4843-bc98-4373ab1dec5d | duration=0.0373s | status=200
+2026-09-05 20:37:07,467 | INFO | Request: GET /docs | request_id=4ca1c0f0-3633-40c8-862a-90291d08b46d | duration=0.0007s | status=200
+2026-09-05 20:37:08,140 | INFO | Request: GET /openapi.json | request_id=2d872ff1-b992-4797-abf4-5e9de56f2aec | duration=0.0353s | status=200
+2026-09-05 20:37:46,648 | INFO | Model loaded successfully!
+2026-09-05 20:38:20,527 | INFO | Model loaded successfully!
+2026-09-05 20:38:20,532 | INFO | Request: GET /api/v1/health | request_id=dac92b8a-55c8-46ff-81f0-c4d6d7c8358c | duration=0.0027s | status=200
+2026-09-05 20:48:28,436 | INFO | Model loaded successfully!
+2026-09-05 20:48:53,313 | INFO | Model loaded successfully!
+2026-09-05 20:48:58,032 | INFO | Request: GET / | request_id=57b7f36d-f250-4729-86c0-fe86dce9eda4 | duration=0.0397s | status=200
+2026-09-05 20:49:04,359 | INFO | Request: GET /docs | request_id=fd0f9b5c-65d6-4c48-bf07-3a96794621a0 | duration=0.0003s | status=200
+2026-09-05 20:49:04,668 | INFO | Request: GET /openapi.json | request_id=f7e52f93-0e46-4cfb-acf7-a83ad89a1ef2 | duration=0.0081s | status=200
+2026-09-05 20:50:02,549 | INFO | Request: POST /api/v2/predict | request_id=3c354c95-3d98-462a-ba95-7297ae3900c4 | duration=0.0138s | status=200
+2026-09-05 20:50:46,917 | INFO | Prediction successful: prediction=0 | request_id=c4741566-eb3e-4b33-ac7d-dbd5c1ceba2a
+2026-09-05 20:50:46,919 | INFO | Request: POST /api/v1/predict | request_id=c4741566-eb3e-4b33-ac7d-dbd5c1ceba2a | duration=0.0048s | status=200
+2026-09-05 20:51:31,886 | INFO | Model loaded successfully!
+2026-09-05 20:51:31,892 | INFO | Request: GET /api/v1/health | request_id=34f01862-23e1-44a9-9675-8af9ef909c18 | duration=0.0035s | status=200

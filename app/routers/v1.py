@@ -33,6 +33,41 @@ def model_info():
         metadata = json.load(f)
     return metadata
 
+@router.post("/predict", response_model=PredictionOutput)
+def predict(request: Request, data: PredictionInput):
+    features = [[
+        data.sepal_length,
+        data.sepal_width,
+        data.petal_length,
+        data.petal_width
+    ]]
+
+    try:
+        prediction = request.app.state.model.predict(features)
+        probabilities = request.app.state.model.predict_proba(features)
+        confidence = float(max(probabilities[0]))
+
+    except Exception as e:
+        logger.error("Prediction error:%s", e)
+        raise HTTPException(
+            status_code=500,
+            detail="Prediction failed"
+        )
+
+    request_id = request.state.request_id
+
+    logger.info(
+        "Prediction successful: prediction=%s | request_id=%s",
+        int(prediction[0]),
+        request_id
+    )
+
+    return {
+        "prediction": int(prediction[0]),
+        "confidence": confidence,
+        "request_id": request_id
+    }
+
 @router.post("/predict-batch",response_model=PredictionBatchOutput)
 def predict_batch(request: Request, data: PredictionBatchInput):
     features = [

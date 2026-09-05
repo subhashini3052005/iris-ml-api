@@ -17,3 +17,8 @@ class PredictionBatchInput(BaseModel):
 
 class PredictionBatchOutput(BaseModel):
     predictions: List[PredictionOutput]
+
+class PredictionV2Output(BaseModel):
+    prediction: int
+    probabilities: List[float]
+    request_id: str
